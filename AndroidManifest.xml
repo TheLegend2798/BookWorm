@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.book.worm"
+    android:versionCode="2"
+    android:versionName="2.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.book.worm.MainActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="landscape"
+			android:configChanges="keyboardHidden|orientation|screenSize" >
+            <intent-filter>
+                <action android:name="com.book.worm.MAINACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.book.worm.RetrieveData"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+			android:configChanges="keyboardHidden|orientation|screenSize"  >
+            <intent-filter>
+                <action android:name="com.book.worm.RETRIEVEDATA" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name="com.book.worm.BorrowBooks"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+			android:configChanges="keyboardHidden|orientation|screenSize"  >
+            <intent-filter>
+                <action android:name="com.book.worm.BORROWBOOKS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.book.worm.SplashScreen"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+			android:configChanges="keyboardHidden|orientation|screenSize" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+       
+    </application>
+
+</manifest>

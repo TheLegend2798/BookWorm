@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/previousB"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/displayAll"
+        android:layout_alignBottom="@+id/displayAll"
+        android:layout_toRightOf="@+id/displayAll"
+        android:onClick="clickHandler"
+        android:text="&lt;--" />
+
+    <Button
+        android:id="@+id/nextB"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/previousB"
+        android:layout_alignBottom="@+id/previousB"
+        android:layout_toRightOf="@+id/previousB"
+        android:onClick="clickHandler"
+        android:text="-->" />
+
+    <Button
+        android:id="@+id/saveChanges"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/nextB"
+        android:layout_alignBottom="@+id/nextB"
+        android:layout_toRightOf="@+id/nextB"
+        android:onClick="clickHandler"
+        android:text="Save" />
+
+    <EditText
+        android:id="@+id/authorText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/titleText"
+        android:ems="10"
+        android:hint="Author" />
+
+    <EditText
+        android:id="@+id/barcodeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/authorText"
+        android:ems="10"
+        android:hint="Barcode" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/available"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/barcodeText"
+        android:ems="10"
+        android:hint="Availability"  />
+
+    <EditText
+        android:id="@+id/inputTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:hint="Insert Title Here" />
+
+    <Button
+        android:id="@+id/searchTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/displayAll"
+        android:layout_toRightOf="@+id/inputTitle"
+        android:text="Search by Title" />
+
+    <Button
+        android:id="@+id/searchScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/searchTitle"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/searchTitle"
+        android:onClick="clickHandler"
+        android:text="Search by Scan" />
+
+    <Button
+        android:id="@+id/displayAll"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/inputTitle"
+        android:onClick="clickHandler"
+        android:text="Display/Update" />
+
+    <EditText
+        android:id="@+id/titleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/borrowBook"
+        android:ems="10"
+        android:hint="Title" />
+
+    <Button
+        android:id="@+id/borrowBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/saveChanges"
+        android:layout_alignBottom="@+id/saveChanges"
+        android:layout_toRightOf="@+id/saveChanges"
+        android:text="Borrow This Book" />
+
+    <Button
+        android:id="@+id/returnBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/borrowBook"
+        android:layout_toRightOf="@+id/borrowBook"
+        android:text="Return Book" />
+
+</RelativeLayout>
